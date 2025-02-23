@@ -1,0 +1,15 @@
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\bin\Debug\net8.0\assigmemnt2.4.exe
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\bin\Debug\net8.0\assigmemnt2.4.deps.json
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\bin\Debug\net8.0\assigmemnt2.4.runtimeconfig.json
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\bin\Debug\net8.0\assigmemnt2.4.dll
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\bin\Debug\net8.0\assigmemnt2.4.pdb
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.GeneratedMSBuildEditorConfig.editorconfig
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.AssemblyInfoInputs.cache
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.AssemblyInfo.cs
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.csproj.CoreCompileInputs.cache
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.sourcelink.json
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.dll
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\refint\assigmemnt2.4.dll
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.pdb
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\assigmemnt2.4.genruntimeconfig.cache
+D:\cSharpProject\assigments\assigment2\assigmemnt2.4\obj\Debug\net8.0\ref\assigmemnt2.4.dll

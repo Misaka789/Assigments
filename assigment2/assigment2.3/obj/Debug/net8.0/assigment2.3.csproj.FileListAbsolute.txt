@@ -1,0 +1,15 @@
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.GeneratedMSBuildEditorConfig.editorconfig
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.AssemblyInfoInputs.cache
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.AssemblyInfo.cs
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.csproj.CoreCompileInputs.cache
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.sourcelink.json
+D:\cSharpProject\assigments\assigment2\assigment2.3\bin\Debug\net8.0\assigment2.3.exe
+D:\cSharpProject\assigments\assigment2\assigment2.3\bin\Debug\net8.0\assigment2.3.deps.json
+D:\cSharpProject\assigments\assigment2\assigment2.3\bin\Debug\net8.0\assigment2.3.runtimeconfig.json
+D:\cSharpProject\assigments\assigment2\assigment2.3\bin\Debug\net8.0\assigment2.3.dll
+D:\cSharpProject\assigments\assigment2\assigment2.3\bin\Debug\net8.0\assigment2.3.pdb
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.dll
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\refint\assigment2.3.dll
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.pdb
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\assigment2.3.genruntimeconfig.cache
+D:\cSharpProject\assigments\assigment2\assigment2.3\obj\Debug\net8.0\ref\assigment2.3.dll

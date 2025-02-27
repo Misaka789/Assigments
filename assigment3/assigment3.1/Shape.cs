@@ -14,7 +14,7 @@ namespace assigment3
     {
         private double length;
         private double width;
-        public Rectangle(double width, double length)
+        public Rectangle( double length,double width)
         {
             if (width >= length) throw new Exception("长度不能小于宽度");
             this.width = width;

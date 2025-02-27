@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cSharpProject\\assigments\\assigment3\\assigment3.csproj",
+      "projectUniqueName": "D:\\cSharpProject\\assigments\\assigment3\\assigment3.1\\assigment3.csproj",
       "projectName": "assigment3",
-      "projectPath": "D:\\cSharpProject\\assigments\\assigment3\\assigment3.csproj",
+      "projectPath": "D:\\cSharpProject\\assigments\\assigment3\\assigment3.1\\assigment3.csproj",
       "packagesPath": "C:\\Users\\颜斌\\.nuget\\packages\\",
-      "outputPath": "D:\\cSharpProject\\assigments\\assigment3\\obj\\",
+      "outputPath": "D:\\cSharpProject\\assigments\\assigment3\\assigment3.1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

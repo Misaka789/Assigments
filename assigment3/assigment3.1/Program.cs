@@ -16,6 +16,7 @@ namespace assigment3
 
             List<Shape> list = new List<Shape>();
             int totalNum = 10;
+            int sumOfShapes = 0;
             Random n = new Random();
             for (int i = 0; i < totalNum; i++)
             {
@@ -41,10 +42,11 @@ namespace assigment3
                     default: break;
 
                 }
+                sumOfShapes++;
             }
             foreach(Shape item in list)
                 item.calculate();
-            
+            Console.WriteLine($"所有图形面积之和为{sumOfShapes}");
         }
     }
 }

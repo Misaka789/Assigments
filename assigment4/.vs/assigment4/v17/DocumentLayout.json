@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\cSharpProject\\assigments\\assigment2\\assigment2.3\\",
+  "WorkspaceRootPath": "D:\\cSharpProject\\assigments\\assigment4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70848426-2575-4253-8AF8-BAA589DE100F}|assigment2.3.csproj|d:\\csharpproject\\assigments\\assigment2\\assigment2.3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70848426-2575-4253-8AF8-BAA589DE100F}|assigment2.3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D0CD44E0-195B-40CA-B0AD-4256CA3D5D0F}|assigment4.csproj|d:\\csharpproject\\assigments\\assigment4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0CD44E0-195B-40CA-B0AD-4256CA3D5D0F}|assigment4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,13 +40,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\cSharpProject\\assigments\\assigment2\\assigment2.3\\Program.cs",
+              "DocumentMoniker": "D:\\cSharpProject\\assigments\\assigment4\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\cSharpProject\\assigments\\assigment2\\assigment2.3\\Program.cs",
+              "ToolTip": "D:\\cSharpProject\\assigments\\assigment4\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T10:49:08.836Z",
+              "WhenOpened": "2025-03-01T11:36:44.65Z",
               "EditorCaption": ""
             }
           ]

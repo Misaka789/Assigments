@@ -3,7 +3,7 @@ using System.Xml.Schema;
 
 namespace assigment2._3
 {
-    internal class Program
+    internal class Prime
     {
      
         static List<int> Function(int end)
@@ -16,7 +16,7 @@ namespace assigment2._3
             {
                 int toRemove = array.First();
                 result.Add(toRemove);
-                array.RemoveAll(x => x % toRemove == 0);
+                array.RemoveAll(item => item% toRemove == 0);
             }
             return result;
         }

@@ -1,0 +1,29 @@
+# 忽略 Visual Studio 生成的目录和文件
+[Bb]in/          # 编译输出目录（Debug/Release）
+[Oo]bj/          # 中间编译文件（如 .obj, .pdb）
+.vs/             # Visual Studio 用户特定目录（如 .suo 文件）
+*.user           # 用户特定配置文件（如 .csproj.user）
+*.suo            # 解决方案用户选项文件（可能包含敏感路径）
+TestResults/     # 单元测试结果目录
+
+# 忽略 NuGet 包和缓存
+[Nn]u[Gg]et/[Ll]ocal/  # 本地 NuGet 包目录
+packages/        # 旧版 NuGet 包目录（如果未使用全局包管理）
+*.nupkg          # NuGet 包文件
+
+# 忽略日志和临时文件
+*.log            # 日志文件
+*.cache          # 临时缓存文件
+*.tlog           # 编译跟踪文件
+
+# 保留必要的代码和项目文件
+!*.cs            # 强制包含 C# 代码文件
+!*.sln           # 强制包含解决方案文件
+!*.csproj        # 强制包含项目文件
+!*.config        # 强制包含配置文件（如 app.config）
+!*.json          # 强制包含 JSON 配置文件
+!*.xml           # 强制包含 XML 配置文件
+
+# 其他可能需要忽略的内容（按需添加）
+.DS_Store        # macOS 系统文件
+*.swp            # Vim 临时文件

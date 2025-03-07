@@ -121,7 +121,15 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+# 忽略 Visual Studio 临时文件
+.vs/
+bin/
+obj/
+Properties/launchSettings.json
 
+# 忽略用户特定文件
+*.user
+*.suo
 # Visual Studio Trace Files
 *.e2e
 

@@ -7,6 +7,7 @@ namespace assigment4
         static void Main(string[] args)
         {
             GenericList<int> list = new GenericList<int>(12,3,4,5,5);
+            Console.WriteLine("list链表的所有数值为:");
             list.ForEach(t => Console.Write(t+" "));
             Console.WriteLine();
             int sum = 0;int max = int.MinValue;int min = int.MaxValue;

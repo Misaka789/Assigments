@@ -8,83 +8,59 @@ namespace assigment5
 {
     public class OrderService
     {
-        private List<Order> allOrders;
-        public OrderService(List<Order> allOrders)
+        private readonly List<Order> orders = new();  //管理所有订单列表 用readonly来修饰 
+
+        public void AddOrder(Order order)
         {
-            this.allOrders = allOrders;
-        }
-        public OrderService()
-        {
-            this.allOrders = new List<Order>();
+            if (orders.Any(o => o.Equals(order)))  //传入一个lambda表达式 判断是否已存在相同订单
+                throw new InvalidOperationException($"订单已存在: {order.OrderId}");
+            orders.Add(order);
         }
 
-        public Order QueryById(String id)       //id作为主键为唯一标识，只会返回一个Order对象 ，其余查询可能会出现多个符合的Order
+        public void RemoveOrder(string orderId)
         {
-           var query =  allOrders.FirstOrDefault(s => s.GetId() == id);
-            if (query == null) throw new Exception($"Id为{id}的订单不存在！");
-            return query;
+            var order = orders.FirstOrDefault(o => o.OrderId == orderId)
+                ?? throw new KeyNotFoundException($"订单不存在: {orderId}");
+            orders.Remove(order);
         }
 
-        public List<Order> QueryByName(String name)
+        public void UpdateOrder(Order newOrder)
         {
-            var query = allOrders.Where(s => s.GetName() == name);
-            if (query == null) throw new Exception($"商品名称为{name}的订单不存在！");
+            RemoveOrder(newOrder.OrderId);
+            orders.Add(newOrder);
+        }
+        //实现订单的排序功能
 
-            return query.ToList();
-        }
-
-        public List<Order> QueryByClientName(String name)
-        {
-            var query = allOrders.Where(s => s.GetClientName() == name);
-            if (query == null) throw new Exception($"客户为{name}的订单不存在！");
-            return query.ToList();
-        }
-
-        public List<Order> QueryByAmount(int amount)
-        {
-            var query = allOrders.Where(s => s.GetAmount() == amount);
-            if (query == null) throw new Exception($"金额为为{amount}的订单不存在！");
-            return query.ToList();
-        }
-
-        public bool DeleteById(String id)
-        {
-            Order query = QueryById(id);
-            allOrders.Remove(query);
-            return true;
-        }
-        public bool AddOrder(String id,String name,String clientName,int amount)
-        {
-            if (QueryById(id) != null) throw new Exception($"id为{id}的订单已存在，不能重复创建!");
-            Order newOrder = new Order(id, name, clientName, amount);
-            return true;
-        }
-        public bool AddOrder(Order order)
-        {
-            allOrders.Add(order);
-            return true;
-        }
-        public bool ModifyById(string id,String newId,String name,String clientName,int amount)
-        {
-            if (QueryById(id) == null) throw new Exception($"id为{id}的订单不存在,无法修改!");
-            var query = QueryById(id);
-            query.SetName(name);
-            query.SetId(newId);
-            query.SetClientName(clientName);
-            query.SetAmout(amount);
-            query.SetUpdateTime(DateTime.Now);
-            return true;
-        }
-       
         public void Sort()
         {
-            if (allOrders == null) throw new Exception("订单为空，无法排序");
-            allOrders.Sort();
+            orders.Sort((o1, o2) => o1.OrderId.CompareTo(o2.OrderId));
         }
-        public void Sort(Comparison<Order> compare)
+        public void Sort(Func<Order, Order, int> comparison)
         {
-            if (allOrders == null) throw new Exception("订单为空，无法排序");
-            allOrders.Sort(compare);
+            orders.Sort((o1, o2) => comparison(o1, o2));
+        }
+
+        public void PrintOrders()
+        {
+            foreach (var order in orders)
+                Console.WriteLine(order);
+        }
+
+        //按照不同需求查询订单
+        public Order GetById(string id)
+        {
+            return orders.SingleOrDefault(o => o.OrderId == id)  //由于ID具有唯一性 所以用SingleOrDefault
+                   ?? throw new KeyNotFoundException($"订单 {id} 不存在");
+        }
+        public IEnumerable<Order> QueryByCustomer(String name)  //根据顾客名字查询订单 返回一个Order集合
+        {
+            return orders.Where(o => o.Customer.Name == name)
+                   ?? throw new KeyNotFoundException($"顾客 {name} 不存在");
+        }
+        public IEnumerable<Order> QueryByProduct(String productName)  //根据商品名字查询订单 返回一个Order集合
+        {
+            return orders.Where(o => o.FindByName(productName))
+                   ?? throw new KeyNotFoundException($"商品 {productName} 不存在");
         }
     }
 }

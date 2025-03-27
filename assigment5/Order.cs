@@ -6,77 +6,27 @@ using System.Threading.Tasks;
 
 namespace assigment5
 {
-    public class Order
+    public class Order : IEquatable<Order>
     {
-        private String Id { get; set; } // id作为主键为唯一标识
-        public String GetId() => this.Id;
+        public string OrderId { get; }
+        public Customer Customer { get; }
+        private readonly HashSet<OrderDetail> details = new();  //单个订单可能存在多个商品 所以用一个hashet来存储可以避免重复
 
-        public void SetId(String id)
-        {
-           this.Id = id;
-        }
-        private String Name { get; set; }
-        public String GetName() => this.Name;
+        public bool FindByName(string name) =>details.Any(d=>d.Product.Name ==name);
+        public float TotalAmount => details.Sum(d => d.Quantity * d.UnitPrice);
 
-        public void SetName(String name)
+        public Order(string orderId, Customer customer)
         {
-            this.Name = name;
+            OrderId = orderId ?? throw new ArgumentNullException(nameof(orderId));
+            Customer = customer ?? throw new ArgumentNullException(nameof(customer));
         }
 
-        private String ClientName { get; set; }
-        public String GetClientName()
-        {
-            return this.ClientName;
-        }
-        public void SetClientName(String name)
-        {
-            this.Name = name;
-        }
-        private int Amount { get; set; }
+        public bool AddDetail(OrderDetail detail) => details.Add(detail);
+        public bool RemoveDetail(OrderDetail detail) => details.Remove(detail);
 
-        public int GetAmount(){ return this.Amount; }
-            public void SetAmout(int amount) { this.Amount = amount; }
+        public bool Equals(Order other) => OrderId == other?.OrderId;
 
-        private DateTime CreateDate { get; set; }
-        private DateTime UpdateDate { get; set; }
-        public void SetUpdateTime(DateTime t) { this.UpdateDate = t; }
-        public Order(String id, string name, string clientName, int amount, DateTime createDate, DateTime updateDate)
-        {
-            Id = id;
-            Name = name;
-            ClientName = clientName;
-            Amount = amount;
-            CreateDate = createDate;
-            UpdateDate = updateDate;
-        }
-
-        public Order(String id, string name, string clientName, int amount)
-        {
-            Id = id;
-            Name = name;
-            ClientName = clientName;
-            Amount = amount;
-            CreateDate = DateTime.Now;
-            UpdateDate = DateTime.Now;
-        }
-
-        public override bool Equals(Object? o)
-        {
-            if (o == null)
-                //throw new Exception("被的订单不能为空订单为空");
-                return false;
-           Order obj = (Order)o;
-            return obj.Id == this.Id && obj.Name == this.Name && obj.ClientName == this.ClientName && obj.Amount == this.Amount;
-        }
-        public override string ToString()
-        {
-            return new String($"订单号:{this.Id} 商品名称:{this.Name} 客户:{this.ClientName} " +
-                $"订单金额:{this.Amount} 订单创建时间:{this.CreateDate} 订单最后更新时间:{this.UpdateDate}");
-        }
-        public int CompareTo(Order obj)
-        {
-            if (obj == null) throw new System.ArgumentException();
-            return this.Name.CompareTo(obj.GetName());
-        }
+        public override string ToString() =>
+            $"订单号: {OrderId}\n客户: {Customer}\n明细:\n{string.Join("\n", details)}\n总计: {TotalAmount:C}\n";
     }
 }

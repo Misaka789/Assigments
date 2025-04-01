@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winform_assigment", "winform_assigment.csproj", "{FEF9EE81-BC17-473A-AB0A-804F9133B12E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEF9EE81-BC17-473A-AB0A-804F9133B12E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF9EE81-BC17-473A-AB0A-804F9133B12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF9EE81-BC17-473A-AB0A-804F9133B12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF9EE81-BC17-473A-AB0A-804F9133B12E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {715F4AC2-0D20-464E-B0F8-7D737F7C7A56}
+	EndGlobalSection
+EndGlobal

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,10 @@ namespace assigment5
 {
     public class OrderService
     {
-        private readonly List<Order> orders = new();  //管理所有订单列表 用readonly来修饰 
+       // private readonly List<Order> orders = new();  //管理所有订单列表 用readonly来修饰 
+        public BindingList<Order> orders { get; set; } = new BindingList<Order>();
 
+        public BindingList<Order> Orders => this.orders;
         public void AddOrder(Order order)
         {
             if (orders.Any(o => o.Equals(order)))  //传入一个lambda表达式 判断是否已存在相同订单
@@ -24,6 +27,23 @@ namespace assigment5
             orders.Remove(order);
         }
 
+        public void RemoveByCustomer(string customerName)
+        {
+            var order = orders.Where(o => o.Customer.Name == customerName).ToList();
+            if (order.Count == 0)
+                throw new KeyNotFoundException($"顾客 {customerName} 不存在");
+            foreach (var o in order)
+                orders.Remove(o);
+        }
+        public void RemoveByProduct(string productName)
+        {
+            var order = orders.Where(o => o.FindByName(productName)).ToList();
+            if (order.Count == 0)
+                throw new KeyNotFoundException($"商品 {productName} 不存在");
+            foreach (var o in order)
+                orders.Remove(o);
+        }
+
         public void UpdateOrder(Order newOrder)
         {
             RemoveOrder(newOrder.OrderId);
@@ -31,14 +51,14 @@ namespace assigment5
         }
         //实现订单的排序功能
 
-        public void Sort()
-        {
-            orders.Sort((o1, o2) => o1.OrderId.CompareTo(o2.OrderId));
-        }
-        public void Sort(Func<Order, Order, int> comparison)
-        {
-            orders.Sort((o1, o2) => comparison(o1, o2));
-        }
+        //public void Sort()
+        //{
+        //    orders.Sort((o1, o2) => o1.OrderId.CompareTo(o2.OrderId));
+        //}
+        //public void Sort(Func<Order, Order, int> comparison)
+        //{
+        //    orders.Sort((o1, o2) => comparison(o1, o2));
+        //}
 
         public void PrintOrders()
         {

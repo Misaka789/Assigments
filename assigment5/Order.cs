@@ -10,9 +10,9 @@ namespace assigment5
     {
         public string OrderId { get; }
         public Customer Customer { get; }
-        private readonly HashSet<OrderDetail> details = new();  //单个订单可能存在多个商品 所以用一个hashet来存储可以避免重复
+       public readonly HashSet<OrderDetail> details = new();  //单个订单可能存在多个商品 所以用一个hashet来存储可以避免重复
 
-        public bool FindByName(string name) =>details.Any(d=>d.Product.Name ==name);
+        public bool FindByName(string name) =>details.Any(d=>d.product.Name ==name);
         public float TotalAmount => details.Sum(d => d.Quantity * d.UnitPrice);
 
         public Order(string orderId, Customer customer)
